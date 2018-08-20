@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DownloaderQuickLook" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M03-1D-fTZ">
+                                <rect key="frame" x="16" y="70" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lr2-dl-LHB">
+                                <rect key="frame" x="97" y="170" width="181" height="30"/>
+                                <state key="normal" title="Mostrar Imagens Baixadas"/>
+                                <connections>
+                                    <action selector="previewFiles" destination="BYZ-38-t0r" eventType="touchUpInside" id="r7T-CV-vgf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nxi-Nt-8WS">
+                                <rect key="frame" x="137" y="120" width="101" height="30"/>
+                                <state key="normal" title="Baixar Imagem"/>
+                                <connections>
+                                    <action selector="download" destination="BYZ-38-t0r" eventType="touchUpInside" id="hvM-mb-DC7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Lr2-dl-LHB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="936-pF-5GC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="M03-1D-fTZ" secondAttribute="trailing" constant="16" id="9cq-pd-rVM"/>
+                            <constraint firstItem="Nxi-Nt-8WS" firstAttribute="top" secondItem="M03-1D-fTZ" secondAttribute="bottom" constant="20" id="qcd-60-mz2"/>
+                            <constraint firstItem="M03-1D-fTZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="qu3-Ep-9pY"/>
+                            <constraint firstItem="Lr2-dl-LHB" firstAttribute="top" secondItem="Nxi-Nt-8WS" secondAttribute="bottom" constant="20" id="sTA-bZ-ffo"/>
+                            <constraint firstItem="M03-1D-fTZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="v7Y-W0-QAT"/>
+                            <constraint firstItem="Nxi-Nt-8WS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wfh-U9-lGn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="urlTextField" destination="M03-1D-fTZ" id="Xyz-EX-C3y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
